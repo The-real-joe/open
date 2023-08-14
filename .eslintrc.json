@@ -1,3 +1,4 @@
 {
+  "ignorePatterns": ["docs/🧠/*"],
   "extends": "next/core-web-vitals"
 }
