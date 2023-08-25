@@ -1,6 +1,8 @@
 import Image from "next/image";
+import type { NextPageWithLayout } from "./_app";
+import RootLayout from "./layout";
 
-export default function Home() {
+const Home: NextPageWithLayout = () => {
   const sections = [
     {
       title: "Embrace the Future of Farming",
@@ -65,4 +67,10 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <RootLayout>{page}</RootLayout>;
+};
+
+export default Home;
