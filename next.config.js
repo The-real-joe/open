@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  distDir: "src/.next",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
