@@ -1,5 +1,6 @@
 import type { NextPageWithLayout } from "../_app";
 import RootLayout from "../layout";
+import { ReactElement } from "react";
 
 const Plans: NextPageWithLayout = () => {
   const plans = [
@@ -100,8 +101,10 @@ const Plans: NextPageWithLayout = () => {
               <p className="text-sm mt-2 text-gray-600">{plan.desc}</p>
               <p className="text-sm mt-2 text-gray-600">{plan.price}</p>
               <ul className="list-disc list-inside">
-                {plan.features.map((feature) => (
-                  <li>{feature}</li>
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="text-sm mt-2 text-gray-600">
+                    {feature}
+                  </li>
                 ))}
               </ul>
             </div>

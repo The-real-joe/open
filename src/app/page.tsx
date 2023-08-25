@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { NextPageWithLayout } from "./_app";
 import RootLayout from "./layout";
+import { ReactElement } from "react";
 
 const Home: NextPageWithLayout = () => {
   const sections = [
