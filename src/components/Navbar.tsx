@@ -13,7 +13,10 @@ export default function Navbar() {
         <Link href="/search" className="text-gray-600 hover:text-gray-800">
           Search
         </Link>
-        <Link href="/plans" className="text-gray-600 hover:text-gray-800">
+        <Link href="#" className="text-gray-600 hover:text-gray-800">
+          Discuss <span className="text-xs text-gray-400">(Coming Soon)</span>
+        </Link>
+        {/* <Link href="/plans" className="text-gray-600 hover:text-gray-800">
           My Plans
         </Link>
         <Link href="/budget" className="text-gray-600 hover:text-gray-800">
@@ -21,7 +24,7 @@ export default function Navbar() {
         </Link>
         <Link href="/network" className="text-gray-600 hover:text-gray-800">
           Expert Network
-        </Link>
+        </Link> */}
       </div>
       <div className="flex items-center space-x-2">
         <Image
