@@ -7,6 +7,12 @@ import { Database } from "../types/supabase";
 export default function AuthForm(props: { view: any }) {
   const supabase = createClientComponentClient<Database>();
 
+  // Use window.location.origin to get the current platform's URL
+  const currentPlatformURL =
+    typeof window !== "undefined"
+      ? window.location.origin
+      : "http://localhost:3000";
+
   return (
     <Auth
       supabaseClient={supabase}
@@ -15,7 +21,7 @@ export default function AuthForm(props: { view: any }) {
       theme="dark"
       showLinks={true}
       providers={["google"]}
-      redirectTo={`${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`}
+      redirectTo={`${currentPlatformURL}/auth/callback`}
     />
   );
 }
