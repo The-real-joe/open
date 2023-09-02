@@ -78,13 +78,14 @@ export default function AccountForm({ session }: { session: Session | null }) {
       alert("Profile updated!");
     } catch (error) {
       alert("Error updating the data!");
+      console.log("error", error);
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div className="form-widget">
+    <div className="form-widget w-full max-w-lg">
       <Avatar
         uid={user?.id!}
         url={avatar_url}
@@ -94,41 +95,58 @@ export default function AccountForm({ session }: { session: Session | null }) {
           updateProfile({ fullname, username, website, avatar_url: url });
         }}
       />
-      <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session?.user.email} disabled />
+      <div className="mt-4">
+        <label htmlFor="email" className="block font-bold mb-2">
+          Email
+        </label>
+        <input
+          id="email"
+          type="text"
+          value={session?.user.email}
+          disabled
+          className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-100 text-gray-700"
+        />
       </div>
-      <div>
-        <label htmlFor="fullName">Full Name</label>
+      <div className="mt-4">
+        <label htmlFor="fullName" className="block font-bold mb-2">
+          Full Name
+        </label>
         <input
           id="fullName"
           type="text"
           value={fullname || ""}
           onChange={(e) => setFullname(e.target.value)}
+          className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-700"
         />
       </div>
-      <div>
-        <label htmlFor="username">Username</label>
+      <div className="mt-4">
+        <label htmlFor="username" className="block font-bold mb-2">
+          Username
+        </label>
         <input
           id="username"
           type="text"
           value={username || ""}
           onChange={(e) => setUsername(e.target.value)}
+          className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-700"
         />
       </div>
-      <div>
-        <label htmlFor="website">Website</label>
+      <div className="mt-4">
+        <label htmlFor="website" className="block font-bold mb-2">
+          Website
+        </label>
         <input
           id="website"
           type="url"
           value={website || ""}
           onChange={(e) => setWebsite(e.target.value)}
+          className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-gray-700"
         />
       </div>
 
-      <div>
+      <div className="mt-8">
         <button
-          className="button primary block"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
           onClick={() =>
             updateProfile({ fullname, username, website, avatar_url })
           }
@@ -138,9 +156,12 @@ export default function AccountForm({ session }: { session: Session | null }) {
         </button>
       </div>
 
-      <div>
+      <div className="mt-4">
         <form action="/auth/signout" method="post">
-          <button className="button block" type="submit">
+          <button
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full"
+            type="submit"
+          >
             Sign out
           </button>
         </form>

@@ -78,7 +78,7 @@ export default function Avatar({
           height={size}
           src={avatarUrl}
           alt="Avatar"
-          className="avatar image"
+          className="mx-auto border rounded-full"
           style={{ height: size, width: size }}
         />
       ) : (
