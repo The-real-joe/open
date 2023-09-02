@@ -17,6 +17,7 @@ const Account: NextPageWithLayout = async () => {
   return (
     <main className="h-screen flex items-center justify-center">
       <div className="z-10 max-w-5xl w-full items-center font-mono text-sm m-auto">
+        <h1 className="text-6xl font-bold text-center mb-6">Account</h1>
         <div className="flex items-center justify-center">
           <AccountForm session={session} />
         </div>
