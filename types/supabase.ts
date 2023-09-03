@@ -9,6 +9,36 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      fbn_products: {
+        Row: {
+          "Active aIngredient": string | null
+          Comparable: string | null
+          Link: string | null
+          "PDF Link": string | null
+          Price: string | null
+          "Product Brand": string | null
+          "Product Name": string
+        }
+        Insert: {
+          "Active aIngredient"?: string | null
+          Comparable?: string | null
+          Link?: string | null
+          "PDF Link"?: string | null
+          Price?: string | null
+          "Product Brand"?: string | null
+          "Product Name": string
+        }
+        Update: {
+          "Active aIngredient"?: string | null
+          Comparable?: string | null
+          Link?: string | null
+          "PDF Link"?: string | null
+          Price?: string | null
+          "Product Brand"?: string | null
+          "Product Name"?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
