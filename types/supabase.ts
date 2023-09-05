@@ -11,31 +11,31 @@ export interface Database {
     Tables: {
       fbn_products: {
         Row: {
-          "Active aIngredient": string | null
+          active_ingredient: string | null
           Comparable: string | null
-          Link: string | null
-          "PDF Link": string | null
-          Price: string | null
-          "Product Brand": string | null
-          "Product Name": string
+          pdf_link: string | null
+          price: string | null
+          product_brand: string | null
+          product_link: string | null
+          product_name: string
         }
         Insert: {
-          "Active aIngredient"?: string | null
+          active_ingredient?: string | null
           Comparable?: string | null
-          Link?: string | null
-          "PDF Link"?: string | null
-          Price?: string | null
-          "Product Brand"?: string | null
-          "Product Name": string
+          pdf_link?: string | null
+          price?: string | null
+          product_brand?: string | null
+          product_link?: string | null
+          product_name: string
         }
         Update: {
-          "Active aIngredient"?: string | null
+          active_ingredient?: string | null
           Comparable?: string | null
-          Link?: string | null
-          "PDF Link"?: string | null
-          Price?: string | null
-          "Product Brand"?: string | null
-          "Product Name"?: string
+          pdf_link?: string | null
+          price?: string | null
+          product_brand?: string | null
+          product_link?: string | null
+          product_name?: string
         }
         Relationships: []
       }
