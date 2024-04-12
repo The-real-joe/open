@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import Link from "next/link";
 import { Comments } from "../components/Comments";
-import { supabase } from "@/lib/supabase/server";
+import { supabase } from "../supabase";
 
 export const revalidate = 0;
 

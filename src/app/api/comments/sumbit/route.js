@@ -1,6 +1,6 @@
 // ./src/app/api/comments/submit/route.js
 
-import { supabase } from "@/lib/supabase/server";
+import { supabase } from "../../../server";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
